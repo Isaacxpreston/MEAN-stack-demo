@@ -13,6 +13,30 @@ angular.module('httpModule', [])
         }
         return data
       })
+    },
+    drop: function(){
+      return $http({
+        method: 'POST',
+        url: '/drop'
+      })
+      .then(function(data, err){
+        if(err){
+          throw err
+        }
+        return data
+      })
+    },
+    show: function(){
+      return $http({
+        method: 'POST',
+        url: '/show'
+      })
+      .then(function(data, err){
+        if(err){
+          throw err
+        }
+        return data
+      })
     }
   }
 })
